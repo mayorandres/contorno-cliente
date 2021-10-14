@@ -21,3 +21,27 @@
 *
 *
 ***************************************************************************************************************/
+function leerNumeroEnteroPositivo(){
+    let num
+    do{
+        num =  prompt("Dame el peso (en kg)")
+    }while(isNaN(num) || !Number.isInteger(parseFloat(num)) || !parseInt(num))
+    return num
+}
+
+function leerEstatura(){
+    let numero
+    do{
+        numero = prompt("Dame la altura en metros")
+    }while(isNaN(numero) || parseFloat(numero)<0.0)
+}
+
+function imc(n1,n2){
+    let imc = n1/n2**2
+    
+}
+
+let peso = leerNumeroEnteroPositivo()
+let estatura = leerEstatura()
+
+
