@@ -17,16 +17,19 @@ function leerNumero(){
     }while(isNaN(numero) ||!Number.isInteger(parseFloat(numero)) || parseInt(numero)<0)
     return numero
 }
-
+const MINUTOS = 3600
+const SEMANA = 7
+const DIA = 24
+const SEGUNDOS = 60
 function calcularTiempo(n){
-    let semana=parseInt(n/(3600*7*24))
-    let resto=n%(3600*7*24)
-    let dia=parseInt(resto/(3600*24))
-    resto%=(3600*24)
-    let hora=parseInt(resto/(3600))
-    resto%=(3600)
-    let minuto=parseInt(resto/60)
-    resto%=(60)
+    let semana=parseInt(n/(MINUTOS*SEMANA*DIA))
+    let resto=n%(MINUTOS*SEMANA*DIA)
+    let dia=parseInt(resto/(MINUTOS*DIA))
+    resto%=(MINUTOS*DIA)
+    let hora=parseInt(resto/(MINUTOS))
+    resto%=(MINUTOS)
+    let minuto=parseInt(resto/SEGUNDOS)
+    resto%=(SEGUNDOS)
    
 
     return `Hemos estado confiandos ${semana} semanas, ${dia} días, ${hora} horas, ${minuto} minutos y ${resto} segundos`

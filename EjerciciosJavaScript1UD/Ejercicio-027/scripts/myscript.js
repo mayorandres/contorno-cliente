@@ -14,3 +14,20 @@
 *
 *
 ***************************************************************************************************************/
+function temperaturaEEUU(temperatura){
+    let celsius=((5/9)*(temperatura-32)).toFixed(1)
+    switch(true){
+        case celsius<0:
+            return `Abrígate muchísimo que estamos a ${celsius} grados`
+        case celsius<10:
+            return `Hace fresquete, ponte la camiseta que estamos a ${celsius}`
+        case celsius>25:
+            return `Estamos a ${celsius} grados, si tienes frío, vete al médico`
+        default:
+            return `En EEUU no existe la temperatura ${celsius} grados`
+            
+    }
+}
+
+
+console.log(temperaturaEEUU(60))

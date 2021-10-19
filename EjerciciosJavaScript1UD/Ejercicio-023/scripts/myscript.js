@@ -34,14 +34,32 @@ function leerEstatura(){
     do{
         numero = prompt("Dame la altura en metros")
     }while(isNaN(numero) || parseFloat(numero)<0.0)
+    return numero
 }
 
-function imc(n1,n2){
-    let imc = n1/n2**2
-    
+//Funcion para saber o IMC da persona
+function calc_imc(n1,n2){
+    let imc = parseFloat(n1)/n2**2
+    imc = Math.round(imc *10) /10
+    return imc    
+}
+//Funcion para calcular o risco que ten a persona
+function enfermedadCoronaria(imc, edad){
+    let riesgo=""
+    if(edad<45){
+        riesgo = (imc<22.0)?"bajo":"medio"
+    }else{
+        riesgo = (imc<22.0)?"medio":"alto"
+    }
+    return riesgo
+     
 }
 
 let peso = leerNumeroEnteroPositivo()
 let estatura = leerEstatura()
+let edad = leerNumeroEnteroPositivo()
+
+console.log(calc_imc(peso,estatura))
+console.log(enfermedadCoronaria(calc_imc(peso,estatura), edad))
 
 

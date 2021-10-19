@@ -14,17 +14,28 @@ function leerNumero(){
     let numero
     do {
         numero = prompt("Dame un número")
-    }while (isNaN(numero) || !Number.isInteger(parseFloat(numero)) || parseInt(numero) <0)
+    }while (isNaN(numero) || !Number.isInteger(parseFloat(numero)))
     return numero
 }
 
 
-function numeroMayor(listaNumeros){
-    let max = 0
-    for (let i=0; i<listaNumeros.length; i++){
-        if (listaNumeros[i] > max){
-            max = listaNumeros[i]
-        }
+//function numeroMayor(listaNumeros){
+//    let max = listaNumeros[0]
+//    for (let i=1; i<listaNumeros.length; i++){
+//        max = (listaNumeros[i]> max)? listaNumeros[i]: max
+//    }
+//    return max
+//}
+
+function numeroMayor(){
+    let num
+
+    num = leerNumero()
+    let max=-Infinity
+    while(num!=0) {
+        max = (num>max)?num:max
+        num = leerNumero()
+        console.log(num,max)
     }
     return max
 }
@@ -39,17 +50,4 @@ function recorrerArray(listado){
     return salida;
 }
 
-let numeros= new Array()
-let num
-do{
-    
-    num = leerNumero()
-    if( num == 0){
-        break;
-    }
-    numeros.push(num)
-}while (num != 0)
-
-console.log(recorrerArray(numeros))
-
-
+let num = numeroMayor()
