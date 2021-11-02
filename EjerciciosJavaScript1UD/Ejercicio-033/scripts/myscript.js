@@ -11,3 +11,33 @@
 *             ! Has fallado ! El número que tienes que adivinar es (mayor|menor)
 *
 ***************************************************************************************************************/
+const comprobarNumero = function(){
+    let numero
+    do{
+        numero = prompt("Dame un numero")
+    }while(isNaN(numero) || !Number.isInteger(parseFloat(numero)) || parseInt(numero)<0 || parseInt(numero)>100)
+    return parseInt(numero) 
+}
+
+
+let numRandom = Math.floor(Math.random()*100)
+
+function ahorcado(n2) {
+    let contador = 0
+    do{
+        n = comprobarNumero()
+        contador ++
+
+        if(n == n2){
+            document.write(`Has acertado! Te ha llevado ${contador} intentos`) 
+            break;
+        }else if(n < n2){
+            document.write("Has fallado! El número que tienes que adivinar es mayor<br/>")
+        }else{
+            document.write("Has fallado ! El número que tienes que adivinar es menor<br />")
+        }
+    }while(n != n2)
+    
+}
+ahorcado(numRandom)
+

@@ -45,22 +45,22 @@ function fibonacci2(num){
 
 function fibonacci3(num){
     let x,y,z
-    let salida=""
+    let i = 0
     x=0;y=1
     switch(num){
         case 0:
             return 0
         case 1:
             return 1
-        default: for () {
-            z=x+y
-            x=y
-            y=z
+        default: 
+            do{
+                z=x+y
+                x=y;y=z
+                i++
+            }while(i<num-1)
+            
         }
-
-
-    }
-    return salida
+    return z
 }
 
 
@@ -68,16 +68,16 @@ let numero = leerNumeroEnteroPositivo()
 //===== fibonacci 1 =====\\
 let salida=" "
 for (let i = 0;i<numero;i++){
-    salida+=fibonacci(i)+","
+    salida+=fibonacci3(i)+","
 }
 salida+=fibonacci(numero)
-//document.write(salida)
+document.write(salida)
 
 //===== fibonacci 2 =====\\
 //document.write(fibonacci2(numero))
 
 //===== fibonacci 3 =====\\
 
-document.write(fibonacci3(numero))
+console.log(fibonacci2(numero))
 
 
