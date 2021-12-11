@@ -18,3 +18,21 @@
 *
 *
 ***************************************************************************************************************/
+
+function eulerMola(num) {
+    //calculamos o factorial
+    let fac =1 
+    for(let i=1;i<=num;i++){
+        fac *= i
+    }
+    return fac
+}
+
+
+let num = 8
+let numTot = 0
+for(let i=0;i<=num;i++){
+    numTot += 1/eulerMola(i)
+}
+console.log(numTot)
+

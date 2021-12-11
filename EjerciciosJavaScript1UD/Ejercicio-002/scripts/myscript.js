@@ -11,3 +11,11 @@
 *
 *
 ***************************************************************************************************************/
+function pedirNome() {
+    let nome 
+    nome = prompt("Cómo te chamas?")
+    return nome    
+}
+// Funcion Arrow
+const pedir = () => nome = prompt("Como te chamas neno?")
+console.log(`Benvido á miña páxina, ${pedir()}`)

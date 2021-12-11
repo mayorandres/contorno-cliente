@@ -15,7 +15,7 @@ function leerNumero(){
     do {
         numero = prompt("Dame un número")
     }while(isNaN(numero)|| !Number.isInteger(parseFloat(numero))|| parseInt(numero)<0)
-    return numero
+    return parseInt(numero)
 }
 
 function calcularHipotenusa(n1,n2){

@@ -43,3 +43,4 @@ let dia = leerNumeroEnteroPositivo()
 let mes = leerNumeroEnteroPositivo()
 let anno = leerNumeroEnteroPositivo()
 console.log(calcularNumeroSuerte(dia,mes,anno))
+//===============================================0000000

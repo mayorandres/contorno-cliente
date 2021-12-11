@@ -14,7 +14,28 @@
 *   Salida  : El NIF NNNNNNNN-L es (falso|auténtico)
 *
 ***************************************************************************************************************/
-function comprobarDNI(dni) {
-    
-    
+
+let letras="TRWAGMYFPDXBNJZSQVHLCKE".split('')
+
+function leerNIF(msg) {
+    let nif
+    let expReg=/^\d{8}-[a-z]{1}$/gi
+    do {
+        nif=prompt(msg)
+    } while (!expReg.test(nif))
+    return nif
 }
+
+
+function comprobarDNI() {
+    let nif=leerNIF("Dame un nif")
+    let partes=nif.split("-")
+
+    if(letras[parseInt(partes[0])%23]===partes[1]){
+        return "El NIF " + nif + " es auténtico"
+    }else{
+        return "El NIF " + nif + " es falso"
+    }
+}
+
+console.log(comprobarDNI())

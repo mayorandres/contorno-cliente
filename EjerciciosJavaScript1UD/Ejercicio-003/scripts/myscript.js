@@ -11,3 +11,13 @@
 *
 *
 ***************************************************************************************************************/
+const pedirDatos =()=>{
+    let edad
+    do{
+        edad = prompt("Que edad tes: ")
+    }while(isNaN(edad) || !Number.isInteger(parseFloat(edad)) || parseInt(edad)<0)
+    return edad 
+}
+let nome = prompt("Como te chamas: ")
+let datos=pedirDatos()
+console.log(nome,datos)

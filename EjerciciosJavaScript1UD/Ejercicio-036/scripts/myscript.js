@@ -13,3 +13,34 @@
 *
 *
 ***************************************************************************************************************/
+const sayNumber = () => {
+    let num
+    do {
+        num = prompt("Let me a number")
+    } while (isNaN(num) || !Number.isInteger(parseFloat(num)) || parseInt(num)<0)
+    return parseInt(num)
+}
+
+const repplace = function(ele) {
+    for(let i=0;i<ele.length;i++){ele = ele.replace(",","-->")}
+    return ele
+}
+
+
+function secNum(num) {
+    numbers = []
+    numbers.push(num)
+    while(num!=1){
+        if (num%2==0){
+            num = num/2
+            numbers.push(num)
+        }else{
+            num = (num *3 ) + 1
+            numbers.push(num)
+        }
+    }
+    str = repplace(numbers.toString())
+    return str
+}
+
+console.log(secNum(3))

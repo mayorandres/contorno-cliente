@@ -16,3 +16,21 @@
 *             ¿Cómo podemos limitar el número de decimales que se mostrarán?
 *
 ***************************************************************************************************************/
+const pedirNumero = () => {
+    let num
+    do{
+        num = prompt("Dame un número")
+    }while(isNaN(num) || !Number.isInteger(parseFloat(num)) || parseInt(num)<0)
+    return parseInt(num)
+}
+
+function operar(num1, num2){
+    return `La suma de ${num1} y ${num2} es: ${(num1+num2)} 
+            La resta de ${num1} y ${num2} es: ${(num1-num2)} 
+            El producto de ${num1} y ${num2} es: ${(num1*num2)} 
+            La division de ${num1} entre ${num2} es: ${(num1*num2)}  `
+}
+
+
+
+console.log(operar(pedirNumero(),pedirNumero()))

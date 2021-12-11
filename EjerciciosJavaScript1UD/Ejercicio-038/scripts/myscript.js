@@ -8,3 +8,10 @@
 *   Salida  : El numero n (es|no es) primo
 *
 ***************************************************************************************************************/
+function isCoursin(num) {
+    let sum = 0
+    for(let i=1;i<=num;i++){if(num%i==0){sum += 1}}
+    return (sum == 2)? `Número ${num} es primo`: `Número ${num} non é primo`
+}
+
+console.log(isCoursin(7))

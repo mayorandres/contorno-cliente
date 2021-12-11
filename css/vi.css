@@ -1,0 +1,86 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    padding: 1rem;
+    background-color: black;
+    color: white;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+.menu li{
+    background-color: darkorange;
+    padding: 5px;
+    margin:5px;
+    border-radius: 3px;
+}
+.menu a{
+    text-decoration: none;
+    color: #CCC;
+}
+main{
+    flex-grow: 1;
+}
+.hero-img{
+    background-image: url("https://placeimg.com/1280/720/animal");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position:center;
+    color:white;
+}
+.hero-img div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:inherit;
+    background-color:rgba(0,0,0,0.65);
+}
+.galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    align-items: flex-end;
+}
+section figure{
+    padding: 5px;
+    margin: 5px;
+}
+figcaption{
+    text-align: center;
+    background-color: lightslategray;
+    color:lightcoral;
+}
+footer{
+    padding: 1rem;
+    color:white;
+    background-color: black;
+}
+@media screen and (min-width:500px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+}

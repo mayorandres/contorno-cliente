@@ -33,3 +33,10 @@ function contarMayusculas(cadena){
 
 
 console.log(contarMayusculas(cadena))
+
+let contar = (cadena) => {
+    vocales ="AEIOU"
+    return res = cadena.split('').map(el=>vocales.includes(el)?1:0).reduce((ant,act)=>ant+act)
+}
+
+console.log(contar("DamE una cAdEna de TExtO"))
