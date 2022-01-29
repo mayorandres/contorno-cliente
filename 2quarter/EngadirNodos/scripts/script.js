@@ -2,23 +2,25 @@ const formulario = document.querySelector("form")
 const textArea = document.querySelector("#textArea")
 const btn = formulario.querySelector("input")
 const comentarios = document.querySelector("#comentarios")
-const link = document.querySelector("#deleteNode")
-var contador = 1
+const contenedor = document.querySelectorAll(".container")
+/* const link = document.querySelector("#deleteNode") */
 
+var contador = 1
+console.log(contenedor.firstElementChild)
 
 btn.addEventListener('click',e=>{
     e.preventDefault()
-    if(textArea.value!=""){
+    if(contenedor.firstChild.value != null){
         crearComentario()
     }
     
 },false)
 
-link.addEventListener('click',e=>{
+/* link.addEventListener('click',e=>{
     e.preventDefault() //Sirve para que non faga o evento de ir a outra páxina.
     eliminarComentario();
 
-})
+}) */
 
 const crearComentario = () => {
         const article = document.createElement("article")
