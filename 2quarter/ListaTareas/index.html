@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div id="container">
+        <h1>Lista de tareas</h1>
+        <form action="">
+            <input type="text" name="tarea" id="tarea">
+            <button type="submit" id="btn-crearTarea">Añadir tarea</button>
+        </form>
+        <div id="tareas">
+        </div>
+    </div>
+    <template id="template-tarea">
+        <div class="tarea">
+            <p></p>
+            <button class="terminada">Terminada</button>
+            <button class="eliminar">Eliminar</button>
+        </div>
+    </template>
+    <script src="scripts/tareas.js"></script>
+</body>
+</html>
