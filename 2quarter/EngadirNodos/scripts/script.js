@@ -1,18 +1,16 @@
 const formulario = document.querySelector("form")
 const textArea = document.querySelector("#textArea")
-const btn = formulario.querySelector("input")
+const btn = formulario.querySelector("#submit")
+const radio = formulario.querySelectorAll(".container")
 const comentarios = document.querySelector("#comentarios")
-const contenedor = document.querySelectorAll(".container")
+
 /* const link = document.querySelector("#deleteNode") */
 
 var contador = 1
-console.log(contenedor.firstElementChild)
 
 btn.addEventListener('click',e=>{
-    e.preventDefault()
-    if(contenedor.firstChild.value != null){
-        crearComentario()
-    }
+    e.preventDefault
+    chooseOption()
     
 },false)
 
@@ -39,5 +37,25 @@ const crearComentario = () => {
 }
 
 const eliminarComentario = () => {
-    comentarios.firstChild.remove()
+    comentarios.lastChild.remove()
+    contador--
+}
+
+const chooseOption = () => {
+    for(let i=0; i<radio.length;i++){
+        if(radio[i].childNodes[1].checked){
+            switch(true){
+                case i == 0:
+                    crearComentario()
+                    break;
+                case i == 1:
+                    eliminarComentario()
+                    break
+                default:
+                    console.log("pdt facer...")
+
+            }
+        }
+    }
+    
 }
